@@ -1,14 +1,13 @@
 package mq
 
 import (
-	rabbitmq "lss_go/lib/rabbitmq"
+	rabbitmq "lss_go/lib/mq/rabbitmq"
 )
 
-
-func Connect(){
+func Connect() {
 	rabbitmq.Connect()
 }
 
-func Close(){
+func Close() {
 	rabbitmq.Close()
 }

@@ -1,0 +1,6 @@
+cqlsh -u cassandra -p cassandra
+
+CREATE KEYSPACE IF NOT EXISTS s1 WITH REPLICATION = { 'class' : 'NetworkTopologyStrategy', 'replication_factor' : 1 };
+
+
+CREATE TABLE IF NOT EXISTS s1.comments (uuid UUID, platform text, org_uuid text, campaign_uuid text, message text, commenter_id text, commenter_name text,commenter_image text, PRIMARY KEY (uuid));
